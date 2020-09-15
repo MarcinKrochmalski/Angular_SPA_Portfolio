@@ -1,0 +1,158 @@
+section{
+
+    position: fixed;
+    top:10vh;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    @include flex(column);
+    overflow: hidden;
+  
+    .container{
+
+        position: relative;
+        @include widthRow();
+        padding: 1rem;
+        opacity: 1;
+        overflow: hidden;
+  
+        &.top{
+  
+            .wrapper{
+    
+                position: absolute;
+                @include widthRow();
+                left: 0;
+                bottom: 0;
+                margin-bottom: 2vh;
+    
+            }
+  
+        }
+        &.bottom{
+    
+            .wrapper{
+    
+                position: absolute;
+                @include widthRow();
+                left: 0;
+                top: 0;
+                margin-top: 2vh;
+
+            }
+    
+        }
+
+        &.center{
+
+            width:100vw;
+            height: auto;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            .wrapper{
+
+                @include widthRow();
+            
+            }
+
+        }
+  
+    }
+  
+    .bar{
+  
+        width: 100vw;
+        height: 2px;
+        @include flex(row);
+        background: rgba( $bright-color, 0.6);
+        z-index: 2;
+
+        .wrapper{
+
+            @include widthRow();
+        
+        }
+  
+    }
+
+    
+    h1 {
+
+        font-size: 4rem;
+        font-weight: 700;
+
+        @media (max-width: getWindowWidth(2)) {
+            font-size: 3rem;
+        }
+    
+    }
+    
+    h2 {
+    
+        font-size: 2rem;
+        font-weight: 600;
+
+        @media (max-width: getWindowWidth(2)) {
+            font-size: 1.4rem;
+        }
+    
+    }
+    
+    h3 {
+    
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        @media (max-width: getWindowWidth(2)) {
+            font-size: 1.2rem;
+        }
+    
+    }
+    
+    h1,
+    h2,
+    h3{
+    
+        padding: 0.4rem;
+    
+        span {
+        color: $orange-color;
+        }
+    
+    }
+    
+    p{
+
+        padding: 0.4rem;
+        margin: 1rem 0;
+        font-weight: 300;
+        line-height: 1.2rem;
+        text-align: justify;
+        color: $bright-color;
+    
+    }
+
+    .chevron{
+
+        width: auto;
+        height: auto;
+        border: none;
+        border-radius: 50%;
+        background: $dark-color;
+        overflow: hidden;
+        outline: none;
+        @include hover-transition;
+
+        &:hover{
+
+            color: $orange-color;
+            @include hover-transition;
+            
+        }
+
+    }
+
+}

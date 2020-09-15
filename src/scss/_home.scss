@@ -1,0 +1,38 @@
+.home{
+
+  text-align: center;
+
+  .container{
+
+    &.top,
+    &.bottom{
+      
+      height: 8rem;
+
+    }
+
+  }
+
+  .bar{
+
+    @include flex();
+
+    .wrapper{
+
+      position: relative;
+
+      .chevron{
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 4;
+
+      }
+
+    }
+
+  }
+
+}

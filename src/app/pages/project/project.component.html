@@ -1,0 +1,49 @@
+<section class="project">
+
+    <div class="container top ">
+
+        <div class="wrapper topWrapperAnimation">
+
+            <h2>{{Project.name}}</h2>
+            <h3>site: <span>{{Project.site}}</span></h3>
+
+        </div>
+
+
+    </div>
+
+    <div class="bar">
+
+        <div class="wrapper">
+
+            <div class="project">
+
+                <img src={{Project.image}} alt={{Project.name}} />
+
+            </div>
+
+            <a routerLink="/my-projects" class="chevron" >
+
+                <fa-icon [icon]="faChevronCircleUp" size="3x"></fa-icon>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="container center">
+
+        <div class="wrapper">
+
+            <p>
+
+                {{Project.text}}
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>

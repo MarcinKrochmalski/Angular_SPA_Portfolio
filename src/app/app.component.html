@@ -1,0 +1,11 @@
+
+
+<app-header></app-header>
+
+<main [@routeAnimations]="getRouterOutletState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+
+<app-background></app-background>
+
+<app-footer></app-footer>

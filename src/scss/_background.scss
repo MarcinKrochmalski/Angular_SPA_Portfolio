@@ -1,0 +1,38 @@
+.backgroundUp{
+
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: 
+        linear-gradient(
+        to right,
+        rgba($dark-color, 0.8),
+        rgba($dark-color, 0.6)
+        ),
+        url('../assets/bg.png') repeat;
+        z-index: -1;
+
+}
+
+.background{
+
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+
+    &.imageBg{
+
+        background: url('../assets/abstract-geometr.jpg');
+        background-size: cover;
+
+    }
+
+}
+
+

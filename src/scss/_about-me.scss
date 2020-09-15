@@ -1,0 +1,85 @@
+.about-me {
+
+    text-align: left;
+
+    .container{
+
+        &.top{
+
+            height: 8rem;
+
+        }
+
+        &.center{
+
+            height: auto;
+            background: rgba($dark-color, 0.8);
+
+        }
+
+    }
+
+    .bar{
+
+        .wrapper{
+
+            position: relative;
+
+            .circle{
+
+                position: absolute;
+                top: 0;
+                right:0;
+                width: 16vw;
+                height: 16vw;
+                border-radius: 50%;
+                transform: translateY(-50%);
+                border: 2px solid rgba($bright-color, 0.6);
+                overflow: hidden;
+                z-index: 4;
+
+                @media (max-width: getWindowWidth(2)) {
+                    width: 30vw;
+                    height: 30vw;
+                }
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+
+            }
+
+            .chevron{
+
+                position: absolute;
+                top: 8vw;
+                right: 8vw;
+                transform: translateX(50%) translateY(-50%);
+                z-index: 5;
+
+                @media (max-width: getWindowWidth(2)) {
+
+                    top: 15vw;
+                    right: 15vw;
+                    
+                }
+    
+            }
+
+        }
+
+    }
+
+    p{
+
+        @include widthRow();
+        padding-right: 18vw;
+
+        @media (max-width: getWindowWidth(2)) {
+            padding-right: 31vw;
+        }
+
+    }
+
+}

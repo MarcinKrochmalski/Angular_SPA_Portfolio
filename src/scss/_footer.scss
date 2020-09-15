@@ -1,0 +1,35 @@
+
+ footer {
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    color: $bright-color;
+    @include flex(row,space-between);
+    z-index: 3;
+
+    div{
+
+      padding: 1rem;
+
+    }
+
+    .socialIcons {
+
+      a {
+
+        padding-right: 0.5rem;
+  
+        &:hover {
+
+          color: $orange-color;
+          @include hover-transition;
+
+        }
+
+      }
+
+    }
+
+  }

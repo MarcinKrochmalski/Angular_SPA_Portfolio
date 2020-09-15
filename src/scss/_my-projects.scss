@@ -1,0 +1,125 @@
+
+.my-projects {
+
+  text-align: center;
+
+  .container{ 
+
+    &.center{
+
+      background: rgba($dark-color, 0.8);
+
+      .wrapper{
+
+        width: 90vw;
+        position: relative;
+
+        @include flex(row wrap,space-around,center);
+
+        .project {
+
+          position: relative;
+          width: 15vw;
+          height: 15vw;
+          overflow: hidden;
+          cursor: pointer;
+
+          @media (max-width: getWindowWidth(2)) {
+            width: 30vw;
+            height: 30vw;
+          }
+        
+
+
+          .alpha{
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            @include flex(row wrap,space-around,center);
+            background: $orange-color;
+            opacity: 0;
+            transition: opacity 300ms ease-out;
+
+            span{
+
+              font-size: 1.5rem;
+              font-weight: 300;
+              color: $bright-color;
+
+            }
+            
+
+          }
+
+          img{
+
+            width: auto;
+            height: 100%;
+            opacity: 1;
+            transform: scale(1);
+            transition: all 300ms ease-out;
+            transition-delay: all 300ms;
+
+          }
+
+          &:hover{
+
+            .alpha{
+
+              opacity: 0.9;
+              transition: opacity 200ms ease-in;
+
+            }
+
+            img{
+
+              transform: scale(1.2);
+              transition: all 200ms ease-out;
+
+            }
+
+          }
+        
+        }
+
+      }
+
+    }
+
+  }
+
+  .bar{
+
+    background-color: transparent;
+
+    .wrapper{
+
+      position: relative;
+      width: 90vw;
+    
+      .chevron{
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: -25px;
+        transform: translateY(-50%);
+        z-index: 5;
+
+        @media (max-width: getWindowWidth(2)) {
+          top: 30vw;
+        }
+
+
+
+      }
+
+    }
+
+  }
+
+}
